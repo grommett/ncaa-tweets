@@ -6,8 +6,6 @@ from boto.s3.key import Key
 from stat import *
 import time, os
 
-# AKIAJ4EO6O6USEUIZFYQ 
-# cwdn44hghyiERlkOEZGLIqSb5jpqw0oSnI9goZSj
 
 env.hosts = ['review.smithandrobot.com']
 
@@ -30,7 +28,7 @@ def dev_build():
     
 def production():
 
-    conn = S3Connection('AKIAJ4EO6O6USEUIZFYQ', 'cwdn44hghyiERlkOEZGLIqSb5jpqw0oSnI9goZSj') 
+    conn = S3Connection('<key>', '<key>') 
     bucket = conn.get_bucket('massrelevance')
     
     build()
